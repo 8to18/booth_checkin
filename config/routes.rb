@@ -1,7 +1,10 @@
 BoothCheckin::Application.routes.draw do
   
-  get "pages/home"
+  resources :leads
+  resources :people
+
   get "pages/start"
+  get "pages/overview"
 
   root :to => 'pages#start'
 

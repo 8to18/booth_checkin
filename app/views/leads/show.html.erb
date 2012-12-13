@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Scheduling:</b>
+  <%= @lead.scheduling %>
+</p>
+
+<p>
+  <b>Registration:</b>
+  <%= @lead.registration %>
+</p>
+
+<p>
+  <b>Spirit:</b>
+  <%= @lead.spirit %>
+</p>
+
+<p>
+  <b>Fundraising:</b>
+  <%= @lead.fundraising %>
+</p>
+
+<p>
+  <b>Camps:</b>
+  <%= @lead.camps %>
+</p>
+
+<p>
+  <b>Boosters:</b>
+  <%= @lead.boosters %>
+</p>
+
+<p>
+  <b>Current:</b>
+  <%= @lead.current %>
+</p>
+
+<p>
+  <b>Person:</b>
+  <%= @lead.person_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_lead_path(@lead) %> |
+<%= link_to 'Back', leads_path %>

@@ -1,0 +1,49 @@
+<%= form_for(@lead) do |f| %>
+  <% if @lead.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@lead.errors.count, "error") %> prohibited this lead from being saved:</h2>
+
+      <ul>
+      <% @lead.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :scheduling %><br />
+    <%= f.check_box :scheduling %>
+  </div>
+  <div class="field">
+    <%= f.label :registration %><br />
+    <%= f.check_box :registration %>
+  </div>
+  <div class="field">
+    <%= f.label :spirit %><br />
+    <%= f.check_box :spirit %>
+  </div>
+  <div class="field">
+    <%= f.label :fundraising %><br />
+    <%= f.check_box :fundraising %>
+  </div>
+  <div class="field">
+    <%= f.label :camps %><br />
+    <%= f.check_box :camps %>
+  </div>
+  <div class="field">
+    <%= f.label :boosters %><br />
+    <%= f.check_box :boosters %>
+  </div>
+  <div class="field">
+    <%= f.label :current %><br />
+    <%= f.text_field :current %>
+  </div>
+  <div class="field">
+    <%= f.label :person_id %><br />
+    <%= f.number_field :person_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

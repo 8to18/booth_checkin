@@ -1,0 +1,6 @@
+<h1>Welcome to the 8to18 Booth!</h1>
+
+<a href="<%= root_url %>people/new">Check-in</a>
+
+<%= Person.find(session[:person_id]).id if session[:person_id] != nil %>
+<%= Lead.find(session[:lead_id]).id if session[:lead_id] != nil %>
