@@ -1,6 +1,9 @@
-<h1>Welcome to the 8to18 Booth!</h1>
+<h1 class="welcome">Welcome to the 8to18 Booth!</h1>
 
-<a href="<%= root_url %>people/new">Check-in</a>
+<%= render "includes/progress" %>
 
-<%= Person.find(session[:person_id]).id if session[:person_id] != nil %>
-<%= Lead.find(session[:lead_id]).id if session[:lead_id] != nil %>
+<a class="checkin" href="<%= root_url %>people/new">
+	<img src="<%= asset_path("check_in.png")%>" />
+</a>
+
+<a class="home-logo" href="#"><img src="<%= asset_path("home-logo.png")%>"/></a>
