@@ -6,7 +6,7 @@ class PagesController < ApplicationController
   end
 
   def overview
-
+  	session[:step] = "Overview"
   end
 
 end

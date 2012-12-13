@@ -1,3 +1,11 @@
 <% if session[:step] == "Start" %>
 	<img src="<%= image_path("bar_A1.png") %>" id="progress-bar"/>
+<% elsif session[:step] == "Person" %>
+	<img src="<%= image_path("bar_A2.png") %>" id="progress-bar"/>
+<% elsif session[:step] == "New Person" %>
+	<img src="<%= image_path("bar_A2.5.png") %>" id="progress-bar"/>
+<% elsif session[:step] == "Leads" %>
+	<img src="<%= image_path("bar_A3.png") %>" id="progress-bar"/>
+<% elsif session[:step] == "Overview" %>
+	<img src="<%= image_path("bar_A4.png") %>" id="progress-bar"/>
 <% end %>

@@ -11,6 +11,12 @@
     </div>
   <% end %>
 
+  <div class="field" style="margin-left: 330px;">
+    <%= f.label :current, "Currently Using" %><br />
+    <%= f.text_field :current %>
+  </div>
+
+<div id="checkboxes-wrap">
   <div class="field">
     <%= f.label :scheduling %><br />
     <%= f.check_box :scheduling %>
@@ -35,15 +41,8 @@
     <%= f.label :boosters %><br />
     <%= f.check_box :boosters %>
   </div>
-  <div class="field">
-    <%= f.label :current %><br />
-    <%= f.text_field :current %>
-  </div>
-  <div class="field">
-    <%= f.label :person_id %><br />
-    <%= f.number_field :person_id %>
-  </div>
+</div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit " "%>
   </div>
 <% end %>

@@ -1,6 +1,7 @@
 class LeadsController < ApplicationController
 
   def new
+    session[:step] = "Leads"
     @lead = Lead.new
   end
 

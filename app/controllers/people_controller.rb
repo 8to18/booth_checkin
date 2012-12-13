@@ -5,6 +5,7 @@ class PeopleController < ApplicationController
   end
 
   def new
+    session[:step] = "New Person"
     @person = Person.new
   end
 
