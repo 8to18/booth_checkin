@@ -11,9 +11,13 @@
     </div>
   <% end %>
 
-  <div class="field" style="margin-left: 330px;">
+  <div class="field" style="float: right; margin-right: 150px;">
     <%= f.label :current, "Currently Using" %><br />
-    <%= f.text_field :current %>
+    <%= select_tag :current, options_for_select(competitors) %>
+  </div>
+  <div class="field" style="margin-left: 150px; float: left;">
+    <%= f.label :school_size %><br />
+    <%= f.text_field :school_size %>
   </div>
 
 <div id="checkboxes-wrap">

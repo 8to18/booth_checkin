@@ -36,11 +36,11 @@
   </div>
   <div class="field">
     <%= f.label :state %><br />
-    <%= f.text_field :state %>
+    <%= select_tag :state, options_for_select(us_states) %>
   </div>
   <div class="field">
     <%= f.label :title %><br />
-    <%= f.text_field :title %>
+    <%= select_tag :title, options_for_select(all_titles) %>
   </div>
 </div>
   <div class="actions">

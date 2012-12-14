@@ -11,6 +11,7 @@ class LeadsController < ApplicationController
 
   def create
     @lead = Lead.new(params[:lead])
+    @lead.person_id = session[:person_id]
     if @lead.save
       session[:lead_id] = @lead.id
       redirect_to pages_overview_path
