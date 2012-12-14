@@ -13,33 +13,33 @@
   <% end %>
 <div id="column-left">
   <div class="field">
-    <%= f.label :first_name %><br />
+    <%= f.label :first_name, "First Name:" %><br />
     <%= f.text_field :first_name %>
   </div>
   <div class="field">
-    <%= f.label :last_name %><br />
+    <%= f.label :last_name, "Last Name:" %><br />
     <%= f.text_field :last_name %>
   </div>
   <div class="field">
-    <%= f.label :email %><br />
+    <%= f.label :email, "Email:" %><br />
     <%= f.text_field :email %>
   </div>
   <div class="field">
-    <%= f.label :phone %><br />
+    <%= f.label :phone, "Phone: " %><br />
     <%= f.text_field :phone %>
   </div>
 </div>
 <div id="column-right">
   <div class="field">
-    <%= f.label :school %><br />
+    <%= f.label :school, "School: "%><br />
     <%= f.text_field :school %>
   </div>
   <div class="field">
-    <%= f.label :state %><br />
+    <%= f.label :state, "State: " %><br />
     <%= select_tag :state, options_for_select(us_states) %>
   </div>
   <div class="field">
-    <%= f.label :title %><br />
+    <%= f.label :title, "Title: " %><br />
     <%= select_tag :title, options_for_select(all_titles) %>
   </div>
 </div>
