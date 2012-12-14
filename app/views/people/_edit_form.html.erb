@@ -40,11 +40,11 @@
   </div>
   <div class="field">
     <%= f.label :state, "State: " %><br />
-    <%= f.select :state, options_for_select(us_states) %>
+    <%= f.select :state, options_for_select(us_states, :selected => @person.state)%>
   </div>
   <div class="field">
     <%= f.label :title, "Title: " %><br />
-    <%= f.select :title, options_for_select(all_titles) %>
+    <%= f.select :title, options_for_select(all_titles, :selected => @person.title) %>
   </div>
 </div>
   <div class="actions">

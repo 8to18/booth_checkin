@@ -2,6 +2,7 @@ module LeadsHelper
 
 	def competitors
     [
+      ['Please Choose Current Scheduler', nil],
       ['Schedule Star', 'Schedule Star'],
       ['HomeGrown System', 'HomeGrown System'],
       ['RSchool', 'RSchool'],

@@ -24,7 +24,7 @@ class LeadsController < ApplicationController
     @lead = Lead.find(params[:id])
     respond_to do |format|
       if @lead.update_attributes(params[:lead])
-        format.html { redirect_to @lead, notice: 'Lead was successfully updated.' }
+        format.html { redirect_to pages_overview_path }
       else
         format.html { render action: "edit" }
       end

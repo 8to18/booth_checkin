@@ -1,7 +1,26 @@
-<h1 class="welcome">Welcome to the 8to18 Booth!</h1>
+<h1 class="welcome">Verify Entered Information</h1>
 
 <%= render "includes/progress" %>
 
-<%= session.to_s %>
+<% person = Person.find(session[:person_id]) %>
+<% lead = Lead.find(session[:lead_id]) %>
+
+<h1 style="margin-top: 0;">Thanks for stopping by, <%= person.first_name + " " + person.last_name %>!</h1>
+
+<div id="person-overview-wrap">
+	<p><strong>School: </strong> <%= person.school %></p>
+	<p><strong>Title: </strong> <%= person.title %></p>
+	<p><strong>State: </strong> <%= person.state %></p>
+	<p><strong>Email: </strong> <%= person.email %></p>
+	<p><strong>Phone: </strong> <%= person.phone %></p>
+	<a href="<%= root_path %>people/<%= person.id %>/edit/">Edit</a>
+</div>
+
+<div id="lead-overview-wrap">
+	<p><strong>Currently Using: </strong> <%= lead.current %></p>
+	<p><strong>School Size: </strong> <%= lead.school_size %></p>
+	<p><strong>Interested in: </strong><%= @interested_in %></p>
+	<a href="<%= root_path %>leads/<%= lead.id %>/edit/">Edit</a>
+</div>
 
 <a class="submit-button" href="<%= root_path %>"><img src="<%= asset_path("submit.png")%>"/></a>

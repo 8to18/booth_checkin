@@ -31,7 +31,7 @@ h1, h2, h3, h4
 
 html
 	background: #cecece
-	padding-bottom: 200px
+	padding-bottom: 100px
 
 body
 	text-align: center
@@ -118,19 +118,150 @@ a.checkin
 		height: 80px
 		border: 0
 
+// Leads Form -------
+
+#checkboxes-wrap
+	float: left
+	margin-top: 25px
+	width: 660px
+	margin-left: 150px
+	.field
+		margin-bottom: 35px
+		float: left
+		clear: none
+		width: 200px
+		margin-right: 30px
+
+
+.box-scheduling
+	input
+		display: none
+	span
+		width: 200px
+		height: 50px
+		display: block
+		background: image-url("scheduling_1.png")
+	input:checked + span
+		background: image-url("scheduling_2.png")
+
+.box-registration
+	input
+		display: none
+	span
+		width: 200px
+		height: 50px
+		display: block
+		background: image-url("registration_1.png")
+	input:checked + span
+		background: image-url("registration_2.png")
+
+.box-spirit
+	input
+		display: none
+	span
+		width: 200px
+		height: 50px
+		display: block
+		background: image-url("spirit_1.png")
+	input:checked + span
+		background: image-url("spirit_2.png")
+
+.box-fundraising
+	input
+		display: none
+	span
+		width: 200px
+		height: 50px
+		display: block
+		background: image-url("fundraising_1.png")
+	input:checked + span
+		background: image-url("fundraising_2.png")
+
+.box-camps
+	input
+		display: none
+	span
+		width: 200px
+		height: 50px
+		display: block
+		background: image-url("camps_1.png")
+	input:checked + span
+		background: image-url("camps_2.png")
+
+.box-boosters
+	input
+		display: none
+	span
+		width: 200px
+		height: 50px
+		display: block
+		background: image-url("boosters_1.png")
+	input:checked + span
+		background: image-url("boosters_2.png")
+
 
 // Overview -----
 
+#person-overview-wrap
+	margin-top: 35px
+	float: left
+	width: 270px
+	padding: 10px 15px
+	background: white
+	border: 1px solid #b2b2b2
+	margin-left: 165px
+	p
+		font-style: italic
+		color: #434343
+		strong
+			color: black
+	a
+		float: right
+
+#lead-overview-wrap
+	margin-top: 35px
+	float: right
+	width: 270px
+	padding: 10px 15px
+	background: white
+	border: 1px solid #b2b2b2
+	margin-right: 165px
+	p
+		font-style: italic
+		color: #434343
+		strong
+			color: black
+	a
+		float: right
+
 .submit-button
-	margin-top: 25px
+	clear: left
+	margin-top: 35px
 	width: 300px
 	margin-left: 330px
 	float: left
 	img
 		width: 300px
 
+// Validation Error ----------
 
-
+#error_explanation
+	float: left
+	h2
+		float: left
+		width: 960px
+		text-align: center
+		color: red
+	ul
+		float: left
+		width: 360px
+		margin-left: 300px
+		li
+			padding-bottom: 3px
+			float: left
+			padding-right: 5px
+			color: #545454
+			font-style: italic
 
 
 

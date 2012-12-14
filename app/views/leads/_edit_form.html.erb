@@ -17,7 +17,7 @@
 
   <div class="field" style="float: right; margin-right: 150px;">
     <%= f.label :current, "Currently Using" %><br />
-    <%= f.select :current, options_for_select(competitors) %>
+    <%= f.select :current, options_for_select(competitors, :selected => @lead.current) %>
   </div>
   <div class="field" style="margin-left: 150px; float: left;">
     <%= f.label :school_size, "School Enrollment Size:" %><br />

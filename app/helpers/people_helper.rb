@@ -3,6 +3,7 @@ module PeopleHelper
 
 	def all_titles
     [
+      ['Please Choose Current Title', ''],
       ['Athletic Director', 'Athletic Director'],
       ['District Athletic Director', 'District Athletic Director'],
       ['Assistant Principle', 'Assistant Principle'],
@@ -12,6 +13,7 @@ module PeopleHelper
 
 	def us_states
     [
+      ['State', ''],
       ['Alabama', 'AL'],
       ['Alaska', 'AK'],
       ['Arizona', 'AZ'],
