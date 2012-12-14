@@ -5,6 +5,19 @@ class PagesController < ApplicationController
   	session[:step] = "Start"
   end
 
+  def select
+    session[:step] = "Select"
+    @people = []
+    Person.order('last_name DESC').all.each do |person|
+      @people << person if person.lead == nil
+    end
+    if @people.count == 0
+      redirect_to new_person_path
+    else
+      return @people
+    end
+  end
+
   def overview
   	session[:step] = "Overview"
   	@interested_in = interested_in

@@ -13,6 +13,11 @@ class PeopleController < ApplicationController
     @person = Person.find(params[:id])
   end
 
+  def select
+    session[:person_id] = params[:id]
+    redirect_to new_lead_path
+  end
+
   def create
     @person = Person.new(params[:person])
     if @person.save

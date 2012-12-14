@@ -1,0 +1,29 @@
+<h1 class="welcome">Select Person</h1>
+
+<%= render "includes/progress" %>
+
+<div id="people-list">
+	<ul>
+		<% @people.each do |person| %>
+			<li>
+				<p class="name">
+					<%= person.last_name + ", " + person.first_name%>
+				</p>
+				<a class="select-button" href="<%= root_path %>people/select/<%= person.id%>">
+					<img src="<%= asset_path('select.png')%>"/>
+				</a>
+				<span class="school-name">
+					<%= person.school %>
+				</span>
+			</li>
+		<% end %>
+	</ul>
+</div>
+
+<div id="sidebar">
+	<p>Find your name in the list on the left.</p>
+	<p style="padding-bottom: 50px;">If your name is not in the list, create a New Entry.</p>
+	<a href="<%= new_person_path %>" class="new-entry-button">
+		<img src="<%= asset_path('new_entry.png')%>"/>
+	</a>
+</div>
