@@ -23,6 +23,25 @@ class PagesController < ApplicationController
   	@interested_in = interested_in
   end
 
+  def admin
+    if session[:admin] != "OK"
+      redirect_to root_path
+    end
+    @people = Person.order("last_name DESC").all
+  end
+
+  def login    
+  end
+
+  def validate
+    if params[:password] == "!A2k1243"
+      session[:admin] = "OK"
+      redirect_to pages_admin_path
+    else
+      render :action => "login"
+    end
+  end
+
   def interested_in
   	lead = Lead.find(session[:lead_id])
   	array = []

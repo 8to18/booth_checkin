@@ -1,0 +1,7 @@
+<h1>Enter the Password</h1>
+<div id="login-form-wrap">
+	<%= form_tag "/pages/validate" do %>
+		<%= password_field_tag :password %>
+		<%= submit_tag "Access Admin Panel"%>
+	<% end %>
+</div>
